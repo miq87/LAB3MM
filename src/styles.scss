@@ -10,14 +10,9 @@ body {
     margin: 20px;
 }
 
-hr {
-	border: 1px solid #1f4068;
-}
-
 .col {
-    margin: 6px;
-    padding: 8px;
-    //border: 2px solid #e43f5a;
+    margin: 4px;
+    padding: 4px;
     border-radius: 12px;
     background-color: #1b1b2f;
 }
@@ -30,6 +25,6 @@ hr {
     margin: 0px; padding: 0px; line-height: normal;
 }
 
-.noborder {
-    border: 0px
+.border {
+    border: 2px solid #e43f5a;
 }
