@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   onAddStudent(student: string) {
-    if (this.studenci.includes(student)) {
+    if(this.studenci.includes(student)) {
       this.isCreated = true
     } else {
       this.isCreated = false
@@ -37,15 +37,10 @@ export class AppComponent {
     this.studenci.splice(index, 1)
   }
   // ZAD 2 - start
-  onAddSamochod(samochod: Samochod) {
-    if (this.samochody.includes(samochod)) {
-      this.isCreated = true
-    } else {
-      this.isCreated = false
-      this.samochody.push(samochod)
-    }
+  onAddCar(samochod: Samochod) {
+    this.samochody.push(samochod)
   }
-  onUsunSamochod(index: number) {
+  onRemoveCar(index: number) {
     this.samochody.splice(index, 1)
   }
   // ZAD 2 - end

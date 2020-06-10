@@ -14,7 +14,8 @@
 
     <div class="row">
         <div class="col">
-            <app-samochody-view [samochodyItems]="samochody"></app-samochody-view>
+            <app-samochody-view [samochodyItems]="samochody"
+            (addCar)="onAddCar($event)" (removeCar)="onRemoveCar($event)"></app-samochody-view>
         </div>
     </div>
 </div>

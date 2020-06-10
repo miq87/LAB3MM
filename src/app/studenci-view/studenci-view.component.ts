@@ -7,17 +7,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class StudenciViewComponent implements OnInit {
 
-  @Input() studenciItems: string[] = [];
-  @Output() usunStudent: EventEmitter<number> = new EventEmitter<number>();
-  @Output() addStudent: EventEmitter<string> = new EventEmitter<string>();
-  student: string;
+  @Input() studenciItems: string[] = []
+  @Output() usunStudent: EventEmitter<number> = new EventEmitter<number>()
+  @Output() addStudent: EventEmitter<string> = new EventEmitter<string>()
+  student: string
   
   ngOnInit() { }
     usunStudenta(index: number) {
-      this.usunStudent.emit(index);
+      this.usunStudent.emit(index)
     }
     dodajStudenta() {
-      this.addStudent.emit(this.student);
+      this.addStudent.emit(this.student)
     }
 
 }

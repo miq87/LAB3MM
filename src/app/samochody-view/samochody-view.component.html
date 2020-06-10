@@ -9,12 +9,23 @@
             <ul>
                 <li *ngFor="let samochod of samochodyItems; let i = index">
                     {{ i + 1 }}) {{ samochod.marka }} {{ samochod.model }} {{ samochod.rok }}
-                    <button class="btn btn-danger btn-sm">Usuń</button>
+                    <button class="btn btn-danger btn-sm" (click)="usunSamochod(i)">Usuń</button>
                 </li>
             </ul>
         </div>
         <div class="col">
-            
+            <div>
+                <input [(ngModel)]="car.marka" placeholder="Podaj markę"><br>
+            </div>
+            <div>
+                <input [(ngModel)]="car.model" placeholder="Podaj model"><br>
+            </div>
+            <div>
+                <input [(ngModel)]="car.rok" placeholder="Podaj rocznik"><br>
+            </div>
+            <div>
+                <button class="btn btn-success btn-sm" (click)="dodajSamochod()">Dodaj samochod</button>
+            </div>
         </div>
     </div>
 </div>

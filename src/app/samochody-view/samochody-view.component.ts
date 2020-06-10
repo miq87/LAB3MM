@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Samochod } from '../samochod';
 
 @Component({
@@ -8,11 +8,21 @@ import { Samochod } from '../samochod';
 })
 export class SamochodyViewComponent implements OnInit {
 
-  @Input() samochodyItems: Samochod[];
+  @Input() samochodyItems: Samochod[]
+  @Output() removeCar: EventEmitter<number> = new EventEmitter<number>()
+  @Output() addCar: EventEmitter<Samochod> = new EventEmitter<Samochod>()
 
+  car = new Samochod('', '', null);
+  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() { }
+    
+  usunSamochod(index: number) {
+    this.removeCar.emit(index)
+  }
+  dodajSamochod() {
+    this.addCar.emit(this.car)
   }
 
 }
