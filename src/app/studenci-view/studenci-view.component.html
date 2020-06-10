@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Studenci:</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li *ngFor="let student of studenciItems; let i = index">
+                    {{ i + 1 }}) {{ student }}
+                    <button class="btn btn-danger btn-sm" (click)="usunStudenta(i)">Usuń</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <label>Podaj studenta:</label><br>
+            <input [(ngModel)]="student"><br>
+            <button class="btn btn-success btn-sm" (click)="dodajStudenta()">Dodaj studenta</button>
+        </div>
+    </div>
+</div>

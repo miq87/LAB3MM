@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: #1f4068;
+    color: #e43f5a;
+    margin: 20px;
+}
+
+hr {
+	border: 1px solid #1f4068;
+}
+
+.col {
+    margin: 6px;
+    padding: 8px;
+    //border: 2px solid #e43f5a;
+    border-radius: 12px;
+    background-color: #1b1b2f;
+}
+
+.col ul {
+    margin: 0px; padding: 0px; padding-left: 20px
+}
+
+.col li {
+    margin: 0px; padding: 0px; line-height: normal;
+}
+
+.noborder {
+    border: 0px
+}

@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LAB3MM';
+
+  studenci: string[];
+  isCreated = false;
+  
+  ngOnInit() {
+    this.studenci = ['Karol', 'Basia', 'Adam', 'Teresa', 'Wojciech', 'Ziemowit'];
+  }
+
+  onAddStudent(student: string) {
+    if (this.studenci.includes(student)) {
+      this.isCreated = true;
+    } else {
+      this.isCreated = false;
+      this.studenci.push(student);
+    }
+  }
+
+  onUsunStudent(index: number) {
+    this.isCreated = false;
+    this.studenci.splice(index, 1);
+  }
+
 }
